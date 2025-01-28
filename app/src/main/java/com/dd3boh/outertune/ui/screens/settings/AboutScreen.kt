@@ -79,7 +79,7 @@ fun AboutScreen(
             verticalAlignment = Alignment.Top,
         ) {
             Text(
-                text = "OuterTune",
+                text = "Flowtune",
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
@@ -88,7 +88,7 @@ fun AboutScreen(
 
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
-                text = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE}) | ${BuildConfig.FLAVOR}",
+                text = "${BuildConfig.VERSION_NAME} ${BuildConfig.FLAVOR}",
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.secondary
             )
@@ -119,7 +119,7 @@ fun AboutScreen(
         Spacer(Modifier.height(4.dp))
 
         Text(
-            text = "By Davide Garberi & Michael Zh.",
+            text = "By abhiram79",
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.secondary
         )
@@ -128,7 +128,7 @@ fun AboutScreen(
 
         Row {
             IconButton(
-                onClick = { uriHandler.openUri("https://github.com/DD3Boh/OuterTune") }
+                onClick = { uriHandler.openUri("https://github.com/abhiram79/Flowtune") }
             ) {
                 Icon(
                     painter = painterResource(R.drawable.github),
@@ -163,7 +163,7 @@ fun AboutScreen(
                 verticalAlignment = Alignment.Top,
             ) {
                 Text(
-                    text = "Device info (Debug)",
+                    text = "(Beta)",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     color = Color.Red,
