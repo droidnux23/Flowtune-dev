@@ -180,20 +180,6 @@ fun AppearanceSettings(
             onCheckedChange = onDynamicThemeChange
         )
         EnumListPreference(
-            title = { Text(stringResource(R.string.player_background_style)) },
-            icon = { Icon(Icons.Rounded.BlurOn, null) },
-            selectedValue = playerBackground,
-            onValueSelected = onPlayerBackgroundChange,
-            valueText = {
-                when (it) {
-                    PlayerBackgroundStyle.DEFAULT -> stringResource(R.string.player_background_default)
-                    PlayerBackgroundStyle.GRADIENT -> stringResource(R.string.player_background_gradient)
-                    PlayerBackgroundStyle.BLUR -> stringResource(R.string.player_background_blur)
-                }
-            },
-            values = availableBackgroundStyles
-        )
-        EnumListPreference(
             title = { Text(stringResource(R.string.dark_theme)) },
             icon = { Icon(Icons.Rounded.DarkMode, null) },
             selectedValue = darkMode,
@@ -216,40 +202,8 @@ fun AppearanceSettings(
         PreferenceGroupTitle(
             title = stringResource(R.string.grp_interface)
         )
-        SwitchPreference(
-            title = { Text(stringResource(R.string.new_interface)) },
-            icon = { Icon(Icons.Rounded.Palette, null) },
-            checked = newInterfaceStyle,
-            onCheckedChange = onNewInterfaceStyleChange
-        )
-        SwitchPreference(
-            title = { Text(stringResource(R.string.show_liked_and_downloaded_playlist)) },
-            icon = { Icon(Icons.AutoMirrored.Rounded.PlaylistPlay, null) },
-            checked = showLikedAndDownloadedPlaylist,
-            onCheckedChange = onShowLikedAndDownloadedPlaylistChange
-        )
-        SwitchPreference(
-            title = { Text(stringResource(R.string.swipe2Queue)) },
-            description = stringResource(R.string.swipe2Queue_description),
-            icon = { Icon(Icons.AutoMirrored.Rounded.PlaylistAdd, null) },
-            checked = swipe2Queue,
-            onCheckedChange = onSwipe2QueueChange
-        )
-        SwitchPreference(
-            title = { Text(stringResource(R.string.slim_navbar_title)) },
-            description = stringResource(R.string.slim_navbar_description),
-            icon = { Icon(Icons.Rounded.MoreHoriz, null) },
-            checked = slimNav,
-            onCheckedChange = onSlimNavChange
-        )
-        PreferenceEntry(
-            title = { Text(stringResource(R.string.tab_arrangement)) },
-            icon = { Icon(Icons.Rounded.Reorder, null) },
-            onClick = {
-                showTabArrangement = true
-            }
-        )
-
+        
+// f c
         if (showTabArrangement)
             ActionPromptDialog(
                 title = stringResource(R.string.tab_arrangement),
@@ -363,16 +317,9 @@ fun AppearanceSettings(
                 }
             )
         }
-
+// f c end
         // flatten subfolders
-        SwitchPreference(
-            title = { Text(stringResource(R.string.flat_subfolders_title)) },
-            description = stringResource(R.string.flat_subfolders_description),
-            icon = { Icon(Icons.Rounded.FolderCopy, null) },
-            checked = flatSubfolders,
-            onCheckedChange = onFlatSubfoldersChange
-        )
-    }
+        
 
     TopAppBar(
         title = { Text(stringResource(R.string.appearance)) },
