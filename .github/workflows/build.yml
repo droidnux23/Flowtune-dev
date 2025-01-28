@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - '**'
+      - 'nightly'
     paths-ignore:
       - 'README.md'
       - 'fastlane/**'
